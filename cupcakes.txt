@@ -1,0 +1,1 @@
+also want to add a edit form for each cupcake on the same html template as wel like the add form is but with a click ofa button next to a cupcake will render that form

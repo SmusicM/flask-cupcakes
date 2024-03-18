@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Cupcake Home{%endblock%}
+
+{% block content %}
+<div class="cupcake-list-cont">
+    <ul class="cupcake-list">
+        
+    </ul>
+</div>
+
+<div>
+    <h1>Add Cupcake!</h1>
+    
+    <form class = "add-cupcake-form" action=""method="POST">
+        <div>
+         {{form.flavor.label}}
+         {{form.flavor(class_='flavor-field')}}
+        </div>
+        <div>
+         {{form.size.label}}
+         {{form.size(class_='size-field')}}
+        </div>
+        <div>
+         {{form.rating.label}}
+         {{form.rating(class_='rating-field')}}
+        </div>
+        <div>
+         {{form.image.label}}
+         {{form.image(class_='image-field')}}
+        </div>
+        <div>
+         {% for field in form %}
+         {% for err in field.errors%}
+         <p>
+             {{field.label}} : {{err}}
+         </p>
+         {%endfor%}
+         {%endfor%}
+        </div>
+        <button>Submit</button>
+     </form>
+</div>
+
+
+
+{% endblock %}
